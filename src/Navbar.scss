@@ -1,38 +1,51 @@
 $main-hsl: 190;
-#main-navbar {
-	ul {
-		padding: 0px;
-		display: grid;
+#main-navbar{
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	flex: 1;
+	//test transi
+	& * {
+		transition-duration: 0.3s;
+	}
 
-		li {
-			list-style: none;
-			display: flex;
-			border-bottom: 1px solid black;
-			// text-align: center;
-			// justify-content: center;
-			flex: 1;
-
-			> a {
-				&:link{
-					text-decoration: none;
-					flex: 1;
-					// border-bottom: 1px solid black;
-				}
-				&:visited {
-					color: inherit;
-				}
-				&:hover {
-					background-color: hsl($main-hsl, 60%, 40%);
-				}
-				&.active {
-					background-color: hsl($main-hsl, 20%, 40%);
-				}
-			}
+	// add bottom border for each element
+	a, .sub-nav-title {
+		border-bottom: 1px solid black;
+		&:hover {
+			background-color: hsl($main-hsl, 60%, 40%);
 		}
 	}
-	& .sub-nav li {
-		&::before {
-			content: '>'
+
+	.sub-nav-title {
+		display: grid;
+		grid-template-columns: 1rem auto;
+		> .puce {
+			text-align: center;
+		}
+	}
+
+	.sub-nav {
+		display: flex;
+		flex-direction: column;
+
+		& > a{
+			padding-left: 1rem;
+		}
+	}
+
+	a {
+		color: inherit;
+		&:link{
+			text-decoration: none;
+			// color: inherit;//prevent default blue link color
+		}
+		&:visited {
+			// color: inherit;//prevent default violet visited link color
+		}
+		&.active {
+			background-color: hsl($main-hsl, 20%, 40%);
 		}
 	}
 }
