@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from 'react'
-import { NavLink, useRouteMatch } from 'react-router-dom'
+import { Link, NavLink, useRouteMatch } from 'react-router-dom'
 import './Navbar.scss'
 
 interface I_Subnav {
@@ -23,8 +23,8 @@ function Navbar() {
 	return (
 		<nav id='main-navbar'>
 			<NavLink to='/' exact>Home</NavLink>
-			<Subnav name='sub'>
-				<NavLink to='open-1'>open 1</NavLink>
+			<Subnav name='Civs'>
+				<Link to='civs/mongols'>Mongols</Link>
 				<NavLink to='open-2'>open 2</NavLink>
 			</Subnav>
 			<Subnav name='test'>

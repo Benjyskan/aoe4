@@ -5,13 +5,17 @@ $main-hsl: 190;
 	grid-template-columns: minmax(100px, auto) 1fr auto;
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas: 
-		"nav header header"
+		"corner header header"
 		"nav main aside"
 		"footer footer footer";
 	// grid border color
 	background-color: black;
 	grid-gap: 1px;
 
+	& #corner {
+		grid-area: corner;
+		background-color: hsl($main-hsl + 10, 20%, 40%);
+	}
 	& header {
 		grid-area: header;
 		background-color: hsl($main-hsl, 20%, 40%);

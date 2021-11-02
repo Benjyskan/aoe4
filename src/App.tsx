@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, useParams } from 'react-router-dom'
 import Navbar from './Navbar'
 import logo from './logo.svg'
 import './App.scss'
@@ -9,8 +9,6 @@ import Body from './Body'
 import Aside from './Aside'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [isSideDisplayed, setIsSideDisplayed] = useState(true)
 
   return (
     <div className="App">
