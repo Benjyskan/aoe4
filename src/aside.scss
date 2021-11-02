@@ -1,0 +1,13 @@
+aside {
+	display: flex;
+	flex-direction: column;
+	&.visible {
+		// background-color: green;
+	}
+	&.hidden {
+		// background-color: red;
+	}
+	& #side-toggle-btn {
+		border-bottom: 1px solid black;
+	}
+}

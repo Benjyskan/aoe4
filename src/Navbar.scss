@@ -1,0 +1,38 @@
+$main-hsl: 190;
+#main-navbar {
+	ul {
+		padding: 0px;
+		display: grid;
+
+		li {
+			list-style: none;
+			display: flex;
+			border-bottom: 1px solid black;
+			// text-align: center;
+			// justify-content: center;
+			flex: 1;
+
+			> a {
+				&:link{
+					text-decoration: none;
+					flex: 1;
+					// border-bottom: 1px solid black;
+				}
+				&:visited {
+					color: inherit;
+				}
+				&:hover {
+					background-color: hsl($main-hsl, 60%, 40%);
+				}
+				&.active {
+					background-color: hsl($main-hsl, 20%, 40%);
+				}
+			}
+		}
+	}
+	& .sub-nav li {
+		&::before {
+			content: '>'
+		}
+	}
+}
