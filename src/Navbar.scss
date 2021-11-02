@@ -41,9 +41,9 @@ $main-hsl: 190;
 			text-decoration: none;
 			// color: inherit;//prevent default blue link color
 		}
-		&:visited {
-			// color: inherit;//prevent default violet visited link color
-		}
+		// &:visited {
+		// 	// color: inherit;//prevent default violet visited link color
+		// }
 		&.active {
 			background-color: hsl($main-hsl, 20%, 40%);
 		}

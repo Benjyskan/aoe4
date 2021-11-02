@@ -20,9 +20,6 @@ function Subnav({ name, children }: I_Subnav) {
 }
 
 function Navbar() {
-	const [active, setActive] = useState('')
-	const [isTestOpen, setIsTestOpen] = useState(true)
-
 	return (
 		<nav id='main-navbar'>
 			<NavLink to='/' exact>Home</NavLink>
